@@ -1,0 +1,376 @@
+@mixin text-width{
+    text-align: center;
+    width:70%;
+    margin:auto;
+}
+@mixin lgTxt{
+    font-size: 24px;
+}
+.home{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+
+}
+.home-slider{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center center;
+    display:none;
+    transition: 0.8s ease-out;
+
+}
+.active{
+    transform:translate3d(0,0,0);
+    z-index: 1;
+    display: block;
+}
+#x-ubimax{
+    background-image: url(https://www.ubimax.com/img/slider/9202ac19.frontline-start.jpg);
+    display:block;
+
+}
+#x-pick{
+    background-image: url(https://www.ubimax.com/img/slider/1e5cf1b4.xpick-start.jpg)
+}
+#x-make{
+    background-image: url(https://www.ubimax.com/img/slider/8075ce8f.xmake-start.jpg)
+}
+#x-inspect {
+    background-image: url(https://www.ubimax.com/img/slider/fb109209.xinspect-start.jpg)
+}
+#x-assist{
+    background-image: url(https://www.ubimax.com/img/slider/637f5c74.xassist-start.jpg)
+}
+.home-text{
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    bottom: 20px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+.home-text h1 {
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    font-weight: 700;
+    font-size: 38px;
+}
+.home-text h2{
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+    color: #c4c4c4;
+    font-weight: 600;
+    font-size: 38px;
+}
+.home-gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 55%,#131313);
+    z-index: 100;
+}
+.button-container{
+    width:95%;
+    margin:auto;
+    display:flex;
+    padding-top:15%;
+    justify-content: space-between
+}
+.button-slider{
+    position: relative;
+    z-index: 2200;
+    width:50px;
+    height:50px;
+    margin:auto;
+    border-radius:50%;
+    background:#000;
+    text-align: center;
+    color:#FFF;
+}
+
+//heading starts here
+.Heading{
+    margin: auto;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+
+//for all headings or add mixin 
+.heading-head{
+    text-align: center;
+    margin:20px auto;
+
+}
+.heading-highlight{
+    @include text-width;
+    @include lgTxt;
+    color: #ba0d0d;
+    font-weight: 600;
+    padding:20px;
+
+}
+.text-lg{
+    @include text-width;
+    @include lgTxt;
+    padding:20px;
+}
+.text-author{
+    @include text-width;
+    @include lgTxt;
+    color:#5e5e5e;
+    margin-bottom:30px;
+}
+//video starts here
+.video-content{
+    overflow: hidden;
+    position: relative;
+    max-height: 400px;
+}
+.video-overlay{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    text-align: center;
+}
+.video-description{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+//content-red starts here
+.content-red{
+    color:#FFF;
+    font-weight:300;
+    background-image: url(https://www.ubimax.com/img/backgrounds/571d1b31.red-pattern.png);
+    background-size: cover;
+    padding:30px 0;
+}
+.red-text{
+    @include text-width;
+    @include lgTxt;
+    h1{
+        padding-top: 30px
+    }
+    p{
+        font-size: 16px;
+        padding:30px 0px;
+    }
+}
+.image-gallery{
+    width:100%;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    
+}
+.image{
+    width:25%;
+    margin:auto;
+    margin:2px;
+    img{
+        width:100%;
+        max-height: 300px;
+    }
+}
+.button{
+    display:flex;
+    margin:auto;
+    justify-content: center;
+    padding:30px;
+}
+//encompasses all the buttons
+    .btn{
+        border: 1px solid #000;
+        background:#FFF;
+        color:#ba0d0d;
+    }
+
+//customer starts here
+.grid-table{
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.customer{
+    position: relative;
+    display: flex;
+    width:22%;
+    margin:auto;
+    margin:10px;
+    height:240px;
+    background:rgba(218,218,218,.4);
+}
+    .customer:hover .links{
+        opacity:1;
+        display:block;
+    }
+.customer-head{
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    z-index: 110;
+    display: block;
+    padding: 10px 15px;
+    background-color: #ba0d0d;
+    color: #fff;
+    text-align: right;
+}
+.other-images{
+    position: absolute;
+    width:60%;
+    top: 60%;
+    width: 70%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(186,13,13,.8);
+    opacity: 0;
+    display: none;
+    transition: all .3s ease;
+}
+.link-container{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    z-index: 110;
+    width: 100%;
+    color:#FFF;
+}
+//content gray starts here
+.content-gray{
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    background: url(https://www.ubimax.com/img/backgrounds/0d5a4316.gray-pattern.png);
+    padding:30px 0;
+
+}
+.items-container{
+    margin:auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:70%;
+    padding:30px 0;
+
+}
+.gray-item{
+    width:22%;
+    margin:auto;
+    display: flex;
+    height:195px;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    p{
+        @include text-width();
+        @include lgTxt();
+    }
+}
+.gray-image{
+    width:100%;
+}
+//events starts here
+.events{
+    padding:30px 0;
+    background-color: #f2f2f2;
+}
+.event-item{
+    position:relative;
+    height:240px;
+    width:30%;
+    margin:auto;
+    background:#FFF;
+}
+.event-head{
+    left: -15px;
+    top: 15px;
+    width:200px;
+
+}
+.event-describe{
+    margin: 10px 0;
+    padding:0 10px;
+    line-height: 40px;
+    text-align: left;
+    color: #ba0d0d;
+    max-width: 100%;
+    background:#FFF;
+}
+.image-container{
+    margin:auto;
+    overflow: hidden;
+    height:200px;
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+//news
+.news-post{
+    position: relative;
+    width:30%;
+    margin:auto;
+    color:#3c3c3c;
+    background: #F2F2F2;
+    height:400px;
+    h3{
+        @include lgTxt();
+        @include text-width();
+        text-align: left;
+        color: #ba0d0d;
+        width:85%;
+    }
+    p{
+        @include text-width();
+        width:90%;
+        text-align: left;
+
+    }
+}
+.read{
+    position: absolute;
+    bottom:30px;
+    left:30px;
+    color: #ba0d0d;
+}
+.caption{
+    width:100%;
+    padding:5px;
+
+}
